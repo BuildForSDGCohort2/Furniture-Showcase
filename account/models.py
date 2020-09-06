@@ -106,7 +106,7 @@ class EmailActivationQuerySet(models.query.QuerySet):
     def confirmable(self):
         now = timezone.now()
         start_range = now - timedelta(days=DEFAULT_ACTIVATION_DAYS)
-        # does my object have a timestamp in here
+     
         end_range = now
         return self.filter(
                 activated = False,
