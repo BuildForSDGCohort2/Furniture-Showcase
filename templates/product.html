@@ -3,13 +3,24 @@
 {% block content %}
 
   <main class="mt-5 pt-4">
-    <div class="container dark-grey-text mt-5">
+    <div class="container dark-grey-text mt-5" >
 
       <!--Grid row-->
       <div class="row wow fadeIn">
-
         <!--Grid column-->
         <div class="col-md-6 mb-4">
+          <img src="{{ item.image.url }}" class="img-fluid">
+          <style>
+              img {
+              transform-origin: 65% 75%;
+              transition: transform 1s, filter .5s ease-out;
+              }
+
+/* The Transformation */
+              img:hover  {
+                transform: scale(1.5);
+              }
+          </style>
 
 
         </div>
@@ -22,7 +33,7 @@
           <div class="p-4">
 
             <div class="mb-3">
-              <a href="">
+              
                 <span class="badge purple mr-1">{{ object.get_category_display }}</span>
               </a>
             </div>
@@ -87,28 +98,30 @@
       <!--Grid row-->
 
       <!--Grid row-->
+
       <div class="row wow fadeIn">
 
         <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
+        <div class="col-lg-4 col-md-12 mb-4" style="-webkit-transform: scaleX(-1);
+        transform: scaleX(-1)">
+          <img src="{{ item.image.url }}" class="img-fluid">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce" class="img-fluid" alt="">
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">
-
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-c" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
 
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
+          <img src="{{ item.image.url }}" class="img-fluid">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="{{ item.image.url }}" class="img-fluid">
+
 
         </div>
         <!--Grid column-->

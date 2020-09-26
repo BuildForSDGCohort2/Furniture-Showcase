@@ -5,7 +5,7 @@
   <div class="container">
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5" >
+    <nav class="navbar navbar-expand-lg  p-3 mb-2 bg-light text-dark" >
 
       <!-- Navbar brand -->
       <span class="navbar-brand"></span>
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
 
         <!-- Links -->
-        <ul class="navbar-nav mr-auto" >
+        <ul class="navbar-nav mr-auto " >
           <li class="nav-item active">
             <a class="nav-link" href="#">All
               <span class="sr-only">(current)</span>
@@ -67,8 +67,7 @@
           <div class="card">
 
             <div class="view overlay">
-              {% comment %} <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
-                class="card-img-top" {% endcomment %} <img src="{{ item.image.url }}" class="card-img-top">
+               <img src="{{ item.image.url }}" class="card-img-top">
               <a href="{{ item.get_absolute_url }}">
                 <div class="mask rgba-white-slight"></div>
               </a>
