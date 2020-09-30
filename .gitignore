@@ -1,0 +1,6 @@
+.ftpconfig
+__pycache__
+.DS_Store
+.env
+logs
+checkpoints
