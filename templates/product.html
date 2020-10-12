@@ -1,7 +1,9 @@
 {% extends "base.html" %}
-
+{% load static %}
+{% load ratings %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
   <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5" >
 
@@ -31,11 +33,17 @@
 
           <!--Content-->
           <div class="p-4">
+            <div class="mb-3">
+              <span>{{ object.title}}</span>
+            </div>
+            
 
             <div class="mb-3">
               
-                <span class="badge purple mr-1">{{ object.get_category_display }}</span>
-              </a>
+                <!-- <span class="badge purple mr-1">{{ object.get_category_display }}</span> -->
+                <span>{% ratings object %}</span>
+                
+
             </div>
 
             <p class="lead">
@@ -87,7 +95,7 @@
         <!--Grid column-->
         <div class="col-md-6 text-center">
 
-          <h4 class="my-4 h4">Additional information</h4>
+          <h4 class="my-4 h4">Because you clicked on this item</h4>
 
           <p></p>
 

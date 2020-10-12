@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+{% load static %}
 {% load cart_template_tags %}
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
@@ -5,8 +7,9 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="/">
-        <strong class="text-muted">Chaguo Lako</strong>
+        <img src="https://raw.githubusercontent.com/l-mwarangu/image/main/oie_Ump4SElbr93U.png" alt="" height="40px" width="80px">
       </a>
+
 
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -33,17 +36,33 @@
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           {% if request.user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="/custom_make">Custom make design</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">All
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">Get design</a>
+            <a class="nav-link waves-effect" href="#">Living Room</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#">Bedroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#">Couches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#">Outdoor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#">Kitchen and Dining room</a>
+          </li>
+          
           <li class="nav-item">
             <a href="{% url 'core:order-summary' %}" class="nav-link waves-effect">
-              <span class="badge red z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
               <i class="fas fa-shopping-cart"></i>
               <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+              <span class="badge black z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
+
             </a>
     
           </li>
